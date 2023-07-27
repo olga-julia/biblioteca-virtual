@@ -1,0 +1,22 @@
+schema:
+    - http://localhost:8080/
+pluckConfig:
+  modules:
+    - name: "apollo-boost"
+      identifier: "gql" # if you import using destruct
+generates:
+  src/types/index.ts:
+    documents:
+      - ./src/graphql/queries/*.ts
+      - ./src/graphql/mutations/*.ts
+    plugins:
+      - typescript
+      - typescript-operations
+config:
+  typesPrefix: T
+  skipTypename: true
+  namingConvention: change-case#pascalCase
+  scalars:
+    DateTime: Date
+    JSON: object
+    Upload: File

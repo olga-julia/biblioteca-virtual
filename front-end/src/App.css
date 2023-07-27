@@ -1,0 +1,16 @@
+:root {
+  --bg-color: #EFF1F4;
+  --bg-hd-color: #96A2D3;
+  --font-black: black;
+  --font-white: white;
+}
+
+.App {
+  text-align: center;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+
+

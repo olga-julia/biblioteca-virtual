@@ -1,0 +1,30 @@
+version: '3'
+services:
+    db:
+        image: 'postgres:latest'
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_USER: postgres
+            POSTGRES_DB: biblioteca
+        volumes:
+            - ./pgdata:/var/lib/postgresql/data
+        ports:
+            - "5444:5432" 
+        networks:
+            - postgres-compose-network   
+    pgadmin-compose:
+        image: dpage/pgadmin4
+        environment: 
+            PGADMIN_DEFAULT_EMAIL: "julia.govoni@gmail.com"
+            PGADMIN_DEFAULT_PASSWORD: "postgres"
+        ports:
+            - "16543:80"
+        depends_on:
+            - db
+        networks:
+            - postgres-compose-network
+
+networks: 
+    postgres-compose-network:
+        driver: bridge    
