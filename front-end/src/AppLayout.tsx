@@ -60,7 +60,7 @@ export const AppLayout = () => {
             </Header>
             <Body>
                 <Wrapper>      
-                    <Paper elevation={3} sx={{ marginTop: 3, marginInline: 22 }}>
+                    <Paper elevation={3} sx={{ marginTop: 3, marginInline: 22, borderRadius:0 }}>
                         <BookInput />
                     </Paper>
                     <Paper elevation={3} sx={{ marginTop: 2, marginInline: 22 }}>
@@ -69,8 +69,7 @@ export const AppLayout = () => {
                 </Wrapper>  
             </Body>
             <Footer>
-                <WrapperFooter>
-                    <p>Desenvolvido por:</p>
+                <WrapperFooter>                    
                     <p>&copy;Olga Júlia Govoni Quito</p>
                     <p>2023</p>
                 </WrapperFooter>

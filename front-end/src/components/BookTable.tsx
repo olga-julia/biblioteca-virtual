@@ -52,7 +52,7 @@ export const BookTable = () => {
 
   return (
     <>
-      <TableContainer component={Paper} elevation={0}>
+      <TableContainer component={Paper} elevation={0} square>
         <Table className={classes.table} size="small" aria-label="a dense table">
           <TableHead>
             <TableRow>
