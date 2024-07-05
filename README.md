@@ -6,13 +6,6 @@ O projeto apresenta um formulário para cadastrar livros, mostrando por uma tabe
 O foco desse projeto foi aplicar os conhecimentos obtidos em Docker, TypeORM e GraphQL.
 
 ## Layout
-<h4 align="center"> 
-  <img width ="auto" height="auto" src="https://github.com/olga-julia/biblioteca-virtual/assets/72014409/7fa186d9-cca9-41b8-9d64-6fb61bf5b4c9">
-</ h4>  
-
-<h4 align="center"> 
-  <img width ="auto" height="auto" src="https://github.com/olga-julia/biblioteca-virtual/assets/72014409/dbf21b88-b5f6-4570-b001-2ed82f6d8d65">
-</ h4>  
 
 # Tecnologias
 
