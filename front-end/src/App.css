@@ -1,8 +1,8 @@
 :root {
-  --bg-color: #EFF1F4;
-  --bg-hd-color: #96A2D3;
-  --font-black: black;
-  --font-white: white;
+  --bg-color: #e9e6e0;
+  --bg-hd-color: #EFF1F4;
+  --font-black:black;
+  --font-family:'Poppins', sans-serif;
 }
 
 .App {
@@ -10,6 +10,7 @@
   background-color: var(--bg-color);
   min-height: 100vh;
   min-width: 100vh;
+  font-family: var(--font-family);  
 }
 
 

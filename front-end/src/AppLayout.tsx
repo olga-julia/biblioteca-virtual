@@ -1,38 +1,34 @@
 import { Paper } from "@mui/material"
 import styled from "styled-components"
-import BookInput from "./components/BookInput"
+import Menu from "./components/Menu"
 import { BookTable } from "./components/BookTable"
-import img from './assets/logo.png'
+import './AppLayout.css';
+import img from './assets/small-logo.png'
 
-const Header = styled.header`
-    display: flex;
-    width: auto;    
-    justify-content: center;
-    background-color: var(--bg-hd-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
+
+const LogoImg = styled.img `
+    padding: 1px;
 `
 
-const HeaderImg = styled.img.attrs(( { src }) => ({
-    src: src,
-    alt: 'Minhas Leituras',
-}))``
+const Header = styled.div`
+    display: flex;   
+    justify-content: center;
+    padding-top: 20px;
+`
 
 const Body = styled.div`
     color: var(--font-black);
 `
 
-const Footer = styled.div`
-    position: fixed;
+const Footer = styled.div` 
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
     height: 100px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-hd-color);
-    color: var(--font-white);
+    padding-top: 230px;    
 `
 
 const WrapperFooter = styled.div`
@@ -40,29 +36,28 @@ const WrapperFooter = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     p {
         margin: 0;
+        color:#595959
     }
 `
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
+    display: flex;   
     justify-content: center;
 `
 
 export const AppLayout = () => {
     return (
-        <>
+        <div className='container'>
             <Header>
-                <HeaderImg src={img} /> 
+                <Paper elevation={3} sx={{display: "flex", backgroundColor:'#e9e6e0', justifyContent:'space-between', width: '50%', borderRadius: '4px' }}>
+                    <LogoImg src={img}  alt='Logo'/>
+                    <Menu />
+                </Paper>
             </Header>
             <Body>
-                <Wrapper>      
-                    <Paper elevation={3} sx={{ marginTop: 3, marginInline: 22, borderRadius:0 }}>
-                        <BookInput />
-                    </Paper>
+                <Wrapper>       
                     <Paper elevation={3} sx={{ marginTop: 2, marginInline: 22 }}>
                         <BookTable />
                     </Paper>
@@ -74,6 +69,6 @@ export const AppLayout = () => {
                     <p>2023</p>
                 </WrapperFooter>
             </Footer>          
-      </>
+      </div>
     )
 }

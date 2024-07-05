@@ -40,9 +40,9 @@ const BookInput = () => {
     }
     
     return (
-        <div style={{ display: "flex", flexDirection: 'column' }}>
+        <div style={{ display: "flex", flexDirection: 'column', borderRadius:0 }}>
             <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                <Typography variant="h6" sx={{ marginLeft: 1, fontFamily: "Poppins" }}>
+                <Typography variant="h6" sx={{ marginLeft: 1, fontFamily:"Poppins" }}>
                     Cadastro
                 </Typography>
             </div>
